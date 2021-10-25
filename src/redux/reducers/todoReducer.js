@@ -6,7 +6,6 @@ export const todoReducer = (state = { todos: [] }, action) => {
       return { ...state, todos: [...state.todos, payload] };
     case REMOVE__TODO:
       return {
-        ...state,
         todos: [...state.todos.filter((todo) => todo.id !== payload)],
       };
     case TODO__ISCOMPLETE:
@@ -15,7 +14,7 @@ export const todoReducer = (state = { todos: [] }, action) => {
         todos: [
           ...state.todos.map((todo) => {
             if (todo.id === payload) {
-              todo.completed = true;
+              todo.completed = !todo.completed;
             }
             return todo;
           }),

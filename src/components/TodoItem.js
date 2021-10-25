@@ -9,10 +9,7 @@ export default function TodoItem({ title, id, completed }) {
   return (
     <div className={`todoItem__con ${completed && "todoComplete"}`}>
       <div>
-        <input
-          type="checkbox"
-          onChange={(e) => e.target.checked && dispatch(isComplete(id))}
-        />
+        <input type="checkbox" onChange={() => dispatch(isComplete(id))} />
         <span>{title}</span>
       </div>
       <div className="todoItem__remove">
