@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useSelector } from "react-redux";
+import AddTodo from "./components/AddTodo";
+import TodoItem from "./components/TodoItem";
+import Footer from "./components/Footer";
 function App() {
+  const { todos } = useSelector((state) => state.todos);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h3>My To Do List</h3>
+      <AddTodo />
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          title={todo.title}
+          id={todo.id}
+          completed={todo.completed}
+        />
+      ))}
+
+      <Footer completeItems={todos.filter((todo) => todo.completed === true)} />
     </div>
   );
 }

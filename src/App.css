@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.app {
+  padding: 2vw;
+  margin: 1rem auto auto auto;
+  width: 70%;
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* styling for add to do component */
+.addTodo__con {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  /* background-color: white; */
+}
+.addTodo__con input,
+.addTodo__con button {
+  padding: 0.5rem;
+  border: none;
+}
+.addTodo__con input {
+  border: 1px solid grey;
+  outline: none;
+  margin-right: 1rem;
+  width: 40%;
+  border-radius: 5px;
+}
+.addTodo__con button {
+  width: 120px;
+  border-radius: 5px;
+  background-color: #33ffec;
+}
+.addTodo__con button:hover {
+  background-color: #00e1ff;
+  cursor: pointer;
+}
+
+/* todo item styling */
+.todoItem__con {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+.todoComplete {
+  background-color: #73f1e5;
+}
+.todoItem__remove > button {
+  background-color: rgb(245, 86, 86);
+  border: none;
+  padding: 0.5rem;
+  width: 7rem;
+  border-radius: 5px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.todoItem__remove > button:hover {
+  background-color: red;
+  cursor: pointer;
+}
+.todoItem__con input {
+  margin-right: 0.7rem;
+}
+@media screen and (max-width: 768px) {
+  .app {
+    width: 95%;
+  }
+  .addTodo__con input {
+    width: 60%;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ------footer styling--------------- */
+.footer {
+  padding: 2rem 0 2rem 0;
 }
