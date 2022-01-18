@@ -1,80 +1,89 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 .app {
-  padding: 2vw;
-  margin: 1rem auto auto auto;
-  width: 70%;
-  background-color: white;
+	padding: 2vw;
+	margin: 1rem auto auto auto;
+	width: 70%;
+	background-color: white;
 }
 
 /* styling for add to do component */
 .addTodo__con {
-  display: flex;
-  justify-content: flex-start;
-  /* background-color: white; */
+	display: flex;
+	justify-content: flex-start;
+	/* background-color: white; */
 }
 .addTodo__con input,
 .addTodo__con button {
-  padding: 0.5rem;
-  border: none;
+	padding: 0.5rem;
+	border: none;
 }
 .addTodo__con input {
-  border: 1px solid grey;
-  outline: none;
-  margin-right: 1rem;
-  width: 40%;
-  border-radius: 5px;
+	border: 1px solid grey;
+	outline: none;
+	margin-right: 1rem;
+	width: 40%;
+	border-radius: 5px;
 }
 .addTodo__con button {
-  width: 120px;
-  border-radius: 5px;
-  background-color: #33ffec;
+	width: 120px;
+	border-radius: 5px;
+	background-color: #33ffec;
 }
 .addTodo__con button:hover {
-  background-color: #00e1ff;
-  cursor: pointer;
+	background-color: #00e1ff;
+	cursor: pointer;
 }
 
 /* todo item styling */
 .todoItem__con {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid lightgrey;
-  margin-top: 1rem;
-  border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	border: 1px solid lightgrey;
+	margin-top: 1rem;
+	border-radius: 5px;
+}
+.todoItem__con > p {
+	width: 60%;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
 }
 .todoComplete {
-  background-color: #73f1e5;
+	background-color: #73f1e5;
 }
 .todoItem__remove > button {
-  background-color: rgb(245, 86, 86);
-  border: none;
-  padding: 0.5rem;
-  width: 7rem;
-  border-radius: 5px;
-  color: white;
+	background-color: rgb(245, 86, 86);
+	border: none;
+	padding: 0.5rem;
+	width: 7rem;
+	border-radius: 5px;
+	color: white;
 }
 .todoItem__remove > button:hover {
-  background-color: red;
-  cursor: pointer;
+	background-color: red;
+	cursor: pointer;
 }
 .todoItem__con input {
-  margin-right: 0.7rem;
+	margin-right: 0.7rem;
 }
+
 @media screen and (max-width: 768px) {
-  .app {
-    width: 95%;
-  }
-  .addTodo__con input {
-    width: 60%;
-  }
+	.app {
+		width: 95%;
+	}
+	.addTodo__con input {
+		width: 60%;
+	}
 }
 
 /* ------footer styling--------------- */
 .footer {
-  padding: 2rem 0 2rem 0;
+	padding: 2rem 0 2rem 0;
 }
